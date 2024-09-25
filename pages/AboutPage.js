@@ -17,14 +17,15 @@ export default function AboutPage({ navigation }) {
             title="Home Page"
             onPress={() => navigation.navigate("Home")}
           ></Button>
+          <Button style={styles.Button}
+            title="List page"
+            onPress={() => navigation.navigate("List")}
+          ></Button>
+          
           <Image
             source={require("../assets/dog.png")}
-            style={{
-              borderColor: "#eee",
-              borderWidth: 5,
-              width: 300,
-              height: 400,
-            }}
+            style={styles.image}
+         
           />
           <Text>
             Lorem Ipsum: Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -78,9 +79,18 @@ export default function AboutPage({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    // alignItems: "center",
-    // justifyContent: "center",
-    // paddingTop: 48,
+    backgroundColor: "#ECF0F1", 
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: 48,
   },
+image: {
+  borderColor:"purple",
+  borderWidth: 5,
+  width: "100%", 
+  height: undefined, 
+  aspectRatio: 0.75,
+  marginVertical: 20,
+},
+
 });

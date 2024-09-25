@@ -5,11 +5,15 @@ export default function HomePage({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text>Hello React Native</Text>
+        <Text>Welcome to my App!</Text>
         <Button
           title="About Page"
           onPress={() => navigation.navigate("About")}
         ></Button>
+        <Button
+            title="List page"
+            onPress={() => navigation.navigate("List")}
+          ></Button>
         <StatusBar style="auto" />
       </View>
     </SafeAreaView>

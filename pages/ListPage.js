@@ -11,14 +11,20 @@ import {
 export default function ListPage({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
+         <Button
+         
+            title="Home Page"
+            onPress={() => navigation.navigate("Home")}
+          ></Button>
       <FlatList
         data={data}
         renderItem={({ item }) => (
           <Text
             style={{
               padding: 16,
-              fontSize: 20,
-              backgroundColor: "aqua",
+              fontSize: 24,
+              backgroundColor: "lightblue",
+              color: "black",
               margin: 2,
             }}
           >
@@ -28,6 +34,7 @@ export default function ListPage({ navigation }) {
         keyExtractor={(item) => item.id}
       />
     </SafeAreaView>
+
   );
 }
 
